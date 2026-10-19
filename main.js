@@ -1,11 +1,32 @@
-// Zahlen im Fakten-Abschnitt hoch- bzw. runterzählen, sobald sie sichtbar werden.
 (function () {
-  const counters = document.querySelectorAll('.stat-num[data-to]');
-  if (!counters.length) return;
-
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (reduceMotion || !('IntersectionObserver' in window)) return; // Endwerte stehen bereits im HTML
+  if (reduceMotion) return; // Endzustand steht bereits im HTML
 
+  // Ausfallsicher einblenden: Ein Element wird erst versteckt, wenn feststeht, dass es
+  // noch unterhalb des sichtbaren Bereichs liegt. Sichtbare Abschnitte bleiben unangetastet.
+  function inView(el, threshold) {
+    const r = el.getBoundingClientRect();
+    const visible = Math.min(r.bottom, window.innerHeight) - Math.max(r.top, 0);
+    return visible > Math.min(r.height, window.innerHeight) * threshold;
+  }
+
+  function reveal(el, threshold, onPrepare, onShow) {
+    if (inView(el, threshold)) return; // schon sichtbar: nichts verstecken, Endzustand zeigen
+    onPrepare();
+    // Scroll-Ereignis plus kurze Zeitabfrage als Sicherheitsnetz
+    const poll = setInterval(check, 250);
+    function check() {
+      if (!inView(el, threshold)) return;
+      clearInterval(poll);
+      window.removeEventListener('scroll', check);
+      window.removeEventListener('resize', check);
+      setTimeout(onShow, 60); // Startzustand kurz rendern lassen, dann animieren
+    }
+    window.addEventListener('scroll', check, { passive: true });
+    window.addEventListener('resize', check);
+  }
+
+  // Zahlen hoch- bzw. runterzählen
   const DURATION = 1800;
   const easeOutCubic = (t) => 1 - Math.pow(1 - t, 3);
 
@@ -19,29 +40,28 @@
     return (el.dataset.prefix || '') + sign + abs + (el.dataset.suffix || '');
   }
 
-  function animate(el) {
+  document.querySelectorAll('[data-to]').forEach((el) => {
     const from = Number(el.dataset.from || 0);
     const to = Number(el.dataset.to);
-    const start = performance.now();
+    const delay = el.closest('.map-counter') ? 1900 : 0; // passend zu den aufploppenden Flaschen
+    reveal(el, 0.6,
+      () => { el.textContent = format(from, el); },
+      () => setTimeout(() => {
+        const start = Date.now();
+        const timer = setInterval(() => {
+          const t = Math.min((Date.now() - start) / DURATION, 1);
+          el.textContent = format(from + (to - from) * easeOutCubic(t), el);
+          if (t >= 1) clearInterval(timer);
+        }, 30);
+      }, delay)
+    );
+  });
 
-    function frame(now) {
-      const t = Math.min((now - start) / DURATION, 1);
-      el.textContent = format(from + (to - from) * easeOutCubic(t), el);
-      if (t < 1) requestAnimationFrame(frame);
-    }
-    requestAnimationFrame(frame);
-  }
+  // iPhones einfahren lassen, Badges aufploppen
+  const phones = document.querySelector('.phones');
+  if (phones) reveal(phones, 0.25, () => phones.classList.add('is-ready'), () => phones.classList.add('is-visible'));
 
-  // Startwert setzen, damit die Zahl nicht erst kurz den Endwert zeigt
-  counters.forEach((el) => { el.textContent = format(Number(el.dataset.from || 0), el); });
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (!entry.isIntersecting) return;
-      animate(entry.target);
-      observer.unobserve(entry.target);
-    });
-  }, { threshold: 0.6 });
-
-  counters.forEach((el) => observer.observe(el));
+  // Karte: Punkte, offene und gesammelte Flaschen nacheinander einblenden
+  const map = document.querySelector('.map');
+  if (map) reveal(map, 0.35, () => map.classList.add('is-ready'), () => map.classList.add('is-visible'));
 })();

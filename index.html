@@ -12,9 +12,7 @@
 <link rel="icon" href="icon-192.png" type="image/png" sizes="192x192">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <meta name="theme-color" content="#17120E">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/fonts.css">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -24,10 +22,11 @@
   <nav class="nav-links" aria-label="Hauptnavigation">
     <a href="#idee">Idee</a>
     <a href="#so-gehts">So geht’s</a>
+    <a href="#karte">Karte</a>
     <a href="#brauereien">Für Brauereien</a>
     <a href="#sponsoring">Sponsoring</a>
   </nav>
-  <a class="btn btn-small" href="#kontakt">Kontakt</a>
+  <a class="btn btn-small" href="mailto:ms633@hdm-stuttgart.de">Kontakt</a>
 </header>
 
 <main id="top">
@@ -107,6 +106,45 @@
     </div>
   </section>
 
+  <!-- APP SCREENS -->
+  <section class="section app-section" id="app">
+    <div class="container center">
+      <p class="eyebrow">Einblick in die App</p>
+      <h2>Sammelpass und neue Badges</h2>
+      <p class="lead narrow">Links der persönliche Sammelpass mit allen gesammelten Badges, rechts der Moment nach dem Scan: Das neue Badge wird gefeiert, die Punkte landen direkt auf dem Konto.</p>
+      <div class="phones">
+        <figure class="iphone" aria-label="App-Screen: Sammelpass mit fünf gesammelten Badges und vier gesperrten Plätzen">
+          <div class="iphone-screen">
+            <div class="statusbar"><span>9:41</span><span class="status-icons"><i class="sig"></i><i class="bat"></i></span></div><div class="island"></div>
+            <div class="app app-collection">
+              <p class="app-title">Mein Sammelpass</p>
+              <p class="app-sub">5 Badges · 385 Punkte</p>
+              <div class="progress"><span></span></div>
+              <div class="badge-grid"><img src="assets/badges/flensburger.jpg" alt=""><img src="assets/badges/chiemseer.jpg" alt=""><img src="assets/badges/wulle.jpg" alt=""><img src="assets/badges/gaffel.jpg" alt=""><img src="assets/badges/schoenbuch.jpg" alt=""><span class="slot"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></span><span class="slot"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></span><span class="slot"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></span><span class="slot"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></span></div>
+              <nav class="tabbar" aria-hidden="true"><span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18a14 14 0 0 1 0-18z"/></svg></span><span class="active"><svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 3 14.8 8.7 21 9.6 16.5 14 17.6 20.2 12 17.3 6.4 20.2 7.5 14 3 9.6 9.2 8.7 12 3"/></svg></span><span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20v-1a4 4 0 0 1 4-4h5a4 4 0 0 1 4 4v1"/><path d="M16 4.5a3.5 3.5 0 0 1 0 7M21.5 20v-1a4 4 0 0 0-3-3.9"/></svg></span></nav>
+            </div>
+          </div>
+          <figcaption>Sammelpass</figcaption>
+        </figure>
+        <figure class="iphone iphone-2" aria-label="App-Screen: Neues Badge Flensburger Dunkel, plus 30 Punkte">
+          <div class="iphone-screen">
+            <div class="statusbar"><span>9:41</span><span class="status-icons"><i class="sig"></i><i class="bat"></i></span></div><div class="island"></div>
+            <div class="app app-new">
+              <p class="app-eyebrow">Neues Badge!</p>
+              <div class="new-badge"><span class="halo"></span><img src="assets/badges/flensburger.jpg" alt=""></div>
+              <p class="app-name">Flensburger Dunkel</p>
+              <p class="app-meta">Flensburg · rund 650 km entfernt</p>
+              <p class="app-points">+30 Punkte</p>
+              <p class="app-button">Zur Sammlung</p>
+            </div>
+          </div>
+          <figcaption>Neues Badge</figcaption>
+        </figure>
+      </div>
+      <p class="source">Vereinfachte Darstellung · Badges sind Designentwürfe, mit Adobe Firefly erstellt</p>
+    </div>
+  </section>
+
   <!-- PUNKTE -->
   <section class="section light" id="punkte">
     <div class="container">
@@ -130,6 +168,43 @@
         </div>
       </div>
       <p class="source">Erster Entwurf, die Faktoren kalibrieren wir gemeinsam mit Brauereien.</p>
+    </div>
+  </section>
+
+  <!-- KARTE -->
+  <section class="section" id="karte">
+    <div class="container map-layout">
+      <div class="map-text">
+        <p class="eyebrow">Die Brauereikarte</p>
+        <h2>Deine Bierreise durch Deutschland</h2>
+        <p class="lead">Alle rund 1.400 Brauereien auf einer Karte. Jedes gesammelte Bier steht als Flasche mit Badge an seinem Ort, offene Brauereien warten als graue Flaschen auf den nächsten Ausflug.</p>
+        <div class="map-counter">
+          <p class="map-counter-num"><span data-from="0" data-to="5">5</span></p>
+          <p>Biere gesammelt<br><span>von rund 1.400 Brauereien</span></p>
+        </div>
+        <ul class="legend">
+          <li><span class="legend-bottle collected"></span>Gesammelt, mit Badge</li>
+          <li><span class="legend-bottle open"></span>Noch offen</li>
+          <li><span class="legend-dot"></span>Weitere Brauereien</li>
+        </ul>
+        <p class="source">Vereinfachte Darstellung · keine echten Standortdaten</p>
+      </div>
+      <div class="map" role="img" aria-label="Deutschlandkarte mit fünf gesammelten Bierflaschen in Flensburg, Köln, Stuttgart, Böblingen und Rosenheim sowie grauen Flaschen für noch offene Brauereien">
+        <svg class="map-svg" viewBox="0 0 376 480" aria-hidden="true"><path class="land" d="M120 24 L168 30 L208 53 L260 47 L308 41 L326 82 L333 117 L322 146 L345 187 L341 205 L356 246 L330 258 L278 293 L249 293 L264 316 L282 351 L311 380 L282 421 L278 445 L282 456 L252 445 L212 462 L186 468 L157 456 L120 450 L83 450 L83 421 L98 374 L39 357 L39 322 L28 304 L24 263 L20 252 L31 228 L24 205 L54 199 L61 176 L50 164 L61 117 L72 94 L98 100 L120 82 L131 59 Z"/><circle class="dot" style="--i:0;--o:0.55" cx="160" cy="397" r="3" fill="#C98A2E" opacity="0.55"/><circle class="dot" style="--i:1;--o:0.4" cx="116" cy="392" r="2.5" fill="#CFC3B0" opacity="0.4"/><circle class="dot" style="--i:2;--o:0.4" cx="92" cy="276" r="2.5" fill="#CFC3B0" opacity="0.4"/><circle class="dot" style="--i:3;--o:0.4" cx="197" cy="420" r="2.5" fill="#CFC3B0" opacity="0.4"/><circle class="dot" style="--i:4;--o:0.55" cx="274" cy="138" r="3" fill="#C98A2E" opacity="0.55"/><circle class="dot" style="--i:5;--o:0.55" cx="251" cy="367" r="3" fill="#C98A2E" opacity="0.55"/><circle class="dot" style="--i:6;--o:0.4" cx="215" cy="420" r="2.5" fill="#CFC3B0" opacity="0.4"/><circle class="dot" style="--i:7;--o:0.55" cx="118" cy="334" r="3" fill="#C98A2E" opacity="0.55"/><circle class="dot" style="--i:8;--o:0.55" cx="172" cy="403" r="3" fill="#C98A2E" opacity="0.55"/><circle class="dot" style="--i:9;--o:0.55" cx="147" cy="418" r="3" fill="#C98A2E" opacity="0.55"/><circle class="dot" style="--i:10;--o:0.4" cx="135" cy="424" r="2.5" fill="#CFC3B0" opacity="0.4"/><circle class="dot" style="--i:11;--o:0.4" cx="194" cy="296" r="2.5" fill="#CFC3B0" opacity="0.4"/><circle class="dot" style="--i:12;--o:0.4" cx="39" cy="304" r="2.5" fill="#CFC3B0" opacity="0.4"/><circle class="dot" style="--i:13;--o:0.55" cx="200" cy="374" r="3" fill="#C98A2E" opacity="0.55"/><circle class="dot" style="--i:14;--o:0.4" cx="124" cy="107" r="2.5" fill="#CFC3B0" opacity="0.4"/><circle class="dot" style="--i:15;--o:0.4" cx="74" cy="98" r="2.5" fill="#CFC3B0" opacity="0.4"/><circle class="dot" style="--i:16;--o:0.4" cx="180" cy="313" r="2.5" fill="#CFC3B0" opacity="0.4"/><circle class="dot" style="--i:17;--o:0.55" cx="297" cy="160" r="3" fill="#C98A2E" opacity="0.55"/><circle class="dot" style="--i:18;--o:0.4" cx="244" cy="253" r="2.5" fill="#CFC3B0" opacity="0.4"/><circle class="dot" style="--i:19;--o:0.4" cx="163" cy="418" r="2.5" fill="#CFC3B0" opacity="0.4"/><circle class="dot" style="--i:20;--o:0.4" cx="219" cy="434" r="2.5" fill="#CFC3B0" opacity="0.4"/><circle class="dot" style="--i:21;--o:0.4" cx="158" cy="441" r="2.5" fill="#CFC3B0" opacity="0.4"/><circle class="dot" style="--i:22;--o:0.4" cx="209" cy="376" r="2.5" fill="#CFC3B0" opacity="0.4"/><circle class="dot" style="--i:23;--o:0.4" cx="40" cy="269" r="2.5" fill="#CFC3B0" opacity="0.4"/><circle class="dot" style="--i:24;--o:0.55" cx="93" cy="133" r="3" fill="#C98A2E" opacity="0.55"/><circle class="dot" style="--i:25;--o:0.4" cx="191" cy="270" r="2.5" fill="#CFC3B0" opacity="0.4"/><circle class="dot" style="--i:26;--o:0.55" cx="167" cy="294" r="3" fill="#C98A2E" opacity="0.55"/><circle class="dot" style="--i:27;--o:0.4" cx="190" cy="246" r="2.5" fill="#CFC3B0" opacity="0.4"/><circle class="dot" style="--i:28;--o:0.4" cx="98" cy="269" r="2.5" fill="#CFC3B0" opacity="0.4"/><circle class="dot" style="--i:29;--o:0.55" cx="252" cy="376" r="3" fill="#C98A2E" opacity="0.55"/><circle class="dot" style="--i:30;--o:0.4" cx="248" cy="69" r="2.5" fill="#CFC3B0" opacity="0.4"/><circle class="dot" style="--i:31;--o:0.55" cx="150" cy="234" r="3" fill="#C98A2E" opacity="0.55"/><circle class="dot" style="--i:32;--o:0.55" cx="120" cy="347" r="3" fill="#C98A2E" opacity="0.55"/><circle class="dot" style="--i:33;--o:0.4" cx="215" cy="336" r="2.5" fill="#CFC3B0" opacity="0.4"/><circle class="dot" style="--i:34;--o:0.4" cx="239" cy="385" r="2.5" fill="#CFC3B0" opacity="0.4"/><circle class="dot" style="--i:35;--o:0.55" cx="117" cy="146" r="3" fill="#C98A2E" opacity="0.55"/><circle class="dot" style="--i:36;--o:0.4" cx="162" cy="238" r="2.5" fill="#CFC3B0" opacity="0.4"/><circle class="dot" style="--i:37;--o:0.4" cx="148" cy="243" r="2.5" fill="#CFC3B0" opacity="0.4"/><circle class="dot" style="--i:38;--o:0.4" cx="168" cy="126" r="2.5" fill="#CFC3B0" opacity="0.4"/><circle class="dot" style="--i:39;--o:0.4" cx="199" cy="360" r="2.5" fill="#CFC3B0" opacity="0.4"/><circle class="dot" style="--i:40;--o:0.55" cx="247" cy="344" r="3" fill="#C98A2E" opacity="0.55"/><circle class="dot" style="--i:41;--o:0.4" cx="189" cy="257" r="2.5" fill="#CFC3B0" opacity="0.4"/><circle class="dot" style="--i:42;--o:0.55" cx="274" cy="99" r="3" fill="#C98A2E" opacity="0.55"/><circle class="dot" style="--i:43;--o:0.4" cx="180" cy="328" r="2.5" fill="#CFC3B0" opacity="0.4"/><circle class="dot" style="--i:44;--o:0.4" cx="95" cy="357" r="2.5" fill="#CFC3B0" opacity="0.4"/><circle class="dot" style="--i:45;--o:0.55" cx="253" cy="332" r="3" fill="#C98A2E" opacity="0.55"/><circle class="dot" style="--i:46;--o:0.4" cx="53" cy="252" r="2.5" fill="#CFC3B0" opacity="0.4"/><circle class="dot" style="--i:47;--o:0.55" cx="268" cy="433" r="3" fill="#C98A2E" opacity="0.55"/><circle class="dot" style="--i:48;--o:0.55" cx="71" cy="179" r="3" fill="#C98A2E" opacity="0.55"/><circle class="dot" style="--i:49;--o:0.55" cx="237" cy="438" r="3" fill="#C98A2E" opacity="0.55"/><circle class="dot" style="--i:50;--o:0.4" cx="170" cy="361" r="2.5" fill="#CFC3B0" opacity="0.4"/><circle class="dot" style="--i:51;--o:0.4" cx="129" cy="143" r="2.5" fill="#CFC3B0" opacity="0.4"/><circle class="dot" style="--i:52;--o:0.55" cx="113" cy="268" r="3" fill="#C98A2E" opacity="0.55"/><circle class="dot" style="--i:53;--o:0.4" cx="187" cy="106" r="2.5" fill="#CFC3B0" opacity="0.4"/><circle class="dot" style="--i:54;--o:0.4" cx="214" cy="426" r="2.5" fill="#CFC3B0" opacity="0.4"/><circle class="dot" style="--i:55;--o:0.4" cx="267" cy="430" r="2.5" fill="#CFC3B0" opacity="0.4"/><circle class="dot" style="--i:56;--o:0.55" cx="178" cy="282" r="3" fill="#C98A2E" opacity="0.55"/><circle class="dot" style="--i:57;--o:0.4" cx="172" cy="265" r="2.5" fill="#CFC3B0" opacity="0.4"/><circle class="dot" style="--i:58;--o:0.4" cx="87" cy="442" r="2.5" fill="#CFC3B0" opacity="0.4"/><circle class="dot" style="--i:59;--o:0.4" cx="95" cy="305" r="2.5" fill="#CFC3B0" opacity="0.4"/><circle class="dot" style="--i:60;--o:0.55" cx="197" cy="280" r="3" fill="#C98A2E" opacity="0.55"/><circle class="dot" style="--i:61;--o:0.55" cx="146" cy="107" r="3" fill="#C98A2E" opacity="0.55"/><circle class="dot" style="--i:62;--o:0.4" cx="158" cy="123" r="2.5" fill="#CFC3B0" opacity="0.4"/><circle class="dot" style="--i:63;--o:0.4" cx="127" cy="202" r="2.5" fill="#CFC3B0" opacity="0.4"/><circle class="dot" style="--i:64;--o:0.55" cx="87" cy="106" r="3" fill="#C98A2E" opacity="0.55"/><circle class="dot" style="--i:65;--o:0.4" cx="157" cy="319" r="2.5" fill="#CFC3B0" opacity="0.4"/><circle class="dot" style="--i:66;--o:0.55" cx="148" cy="431" r="3" fill="#C98A2E" opacity="0.55"/><circle class="dot" style="--i:67;--o:0.4" cx="124" cy="89" r="2.5" fill="#CFC3B0" opacity="0.4"/><circle class="dot" style="--i:68;--o:0.4" cx="78" cy="171" r="2.5" fill="#CFC3B0" opacity="0.4"/><circle class="dot" style="--i:69;--o:0.55" cx="178" cy="179" r="3" fill="#C98A2E" opacity="0.55"/><circle class="dot" style="--i:70;--o:0.4" cx="73" cy="175" r="2.5" fill="#CFC3B0" opacity="0.4"/><circle class="dot" style="--i:71;--o:0.4" cx="99" cy="344" r="2.5" fill="#CFC3B0" opacity="0.4"/><circle class="dot" style="--i:72;--o:0.55" cx="186" cy="445" r="3" fill="#C98A2E" opacity="0.55"/><circle class="dot" style="--i:73;--o:0.55" cx="278" cy="395" r="3" fill="#C98A2E" opacity="0.55"/><circle class="dot" style="--i:74;--o:0.4" cx="233" cy="324" r="2.5" fill="#CFC3B0" opacity="0.4"/><circle class="dot" style="--i:75;--o:0.4" cx="250" cy="58" r="2.5" fill="#CFC3B0" opacity="0.4"/><circle class="dot" style="--i:76;--o:0.4" cx="110" cy="272" r="2.5" fill="#CFC3B0" opacity="0.4"/><circle class="dot" style="--i:77;--o:0.55" cx="219" cy="446" r="3" fill="#C98A2E" opacity="0.55"/><circle class="dot" style="--i:78;--o:0.4" cx="140" cy="416" r="2.5" fill="#CFC3B0" opacity="0.4"/><circle class="dot" style="--i:79;--o:0.4" cx="169" cy="125" r="2.5" fill="#CFC3B0" opacity="0.4"/><circle class="dot" style="--i:80;--o:0.4" cx="225" cy="313" r="2.5" fill="#CFC3B0" opacity="0.4"/><circle class="dot" style="--i:81;--o:0.4" cx="149" cy="264" r="2.5" fill="#CFC3B0" opacity="0.4"/><circle class="dot" style="--i:82;--o:0.55" cx="117" cy="272" r="3" fill="#C98A2E" opacity="0.55"/><circle class="dot" style="--i:83;--o:0.55" cx="134" cy="200" r="3" fill="#C98A2E" opacity="0.55"/><circle class="dot" style="--i:84;--o:0.55" cx="339" cy="203" r="3" fill="#C98A2E" opacity="0.55"/><circle class="dot" style="--i:85;--o:0.4" cx="207" cy="308" r="2.5" fill="#CFC3B0" opacity="0.4"/><circle class="dot" style="--i:86;--o:0.4" cx="107" cy="250" r="2.5" fill="#CFC3B0" opacity="0.4"/><circle class="dot" style="--i:87;--o:0.4" cx="41" cy="235" r="2.5" fill="#CFC3B0" opacity="0.4"/><circle class="dot" style="--i:88;--o:0.4" cx="233" cy="396" r="2.5" fill="#CFC3B0" opacity="0.4"/><circle class="dot" style="--i:89;--o:0.4" cx="84" cy="194" r="2.5" fill="#CFC3B0" opacity="0.4"/><circle class="dot" style="--i:90;--o:0.4" cx="44" cy="288" r="2.5" fill="#CFC3B0" opacity="0.4"/><circle class="dot" style="--i:91;--o:0.4" cx="207" cy="301" r="2.5" fill="#CFC3B0" opacity="0.4"/><circle class="dot" style="--i:92;--o:0.4" cx="160" cy="316" r="2.5" fill="#CFC3B0" opacity="0.4"/><circle class="dot" style="--i:93;--o:0.55" cx="287" cy="374" r="3" fill="#C98A2E" opacity="0.55"/><circle class="dot" style="--i:94;--o:0.55" cx="306" cy="93" r="3" fill="#C98A2E" opacity="0.55"/><circle class="dot" style="--i:95;--o:0.55" cx="284" cy="76" r="3" fill="#C98A2E" opacity="0.55"/></svg>
+<div class="pin pin-open" style="left:54.26%;top:66.04%;--d:0" aria-hidden="true"><svg class="bottle" viewBox="0 0 40 96" aria-hidden="true"><rect x="15" y="0" width="10" height="7" rx="2" class="cap"/><path class="glass" d="M15 7h10v17c0 6 11 10 11 22v44a6 6 0 0 1-6 6H10a6 6 0 0 1-6-6V46c0-12 11-16 11-22z"/><rect x="8" y="52" width="3" height="34" rx="1.5" class="shine"/></svg></div>
+<div class="pin pin-open" style="left:78.99%;top:33.96%;--d:1" aria-hidden="true"><svg class="bottle" viewBox="0 0 40 96" aria-hidden="true"><rect x="15" y="0" width="10" height="7" rx="2" class="cap"/><path class="glass" d="M15 7h10v17c0 6 11 10 11 22v44a6 6 0 0 1-6 6H10a6 6 0 0 1-6-6V46c0-12 11-16 11-22z"/><rect x="8" y="52" width="3" height="34" rx="1.5" class="shine"/></svg></div>
+<div class="pin pin-open" style="left:82.18%;top:51.88%;--d:2" aria-hidden="true"><svg class="bottle" viewBox="0 0 40 96" aria-hidden="true"><rect x="15" y="0" width="10" height="7" rx="2" class="cap"/><path class="glass" d="M15 7h10v17c0 6 11 10 11 22v44a6 6 0 0 1-6 6H10a6 6 0 0 1-6-6V46c0-12 11-16 11-22z"/><rect x="8" y="52" width="3" height="34" rx="1.5" class="shine"/></svg></div>
+<div class="pin pin-open" style="left:32.71%;top:63.33%;--d:3" aria-hidden="true"><svg class="bottle" viewBox="0 0 40 96" aria-hidden="true"><rect x="15" y="0" width="10" height="7" rx="2" class="cap"/><path class="glass" d="M15 7h10v17c0 6 11 10 11 22v44a6 6 0 0 1-6 6H10a6 6 0 0 1-6-6V46c0-12 11-16 11-22z"/><rect x="8" y="52" width="3" height="34" rx="1.5" class="shine"/></svg></div>
+<div class="pin pin-open" style="left:42.82%;top:35.83%;--d:4" aria-hidden="true"><svg class="bottle" viewBox="0 0 40 96" aria-hidden="true"><rect x="15" y="0" width="10" height="7" rx="2" class="cap"/><path class="glass" d="M15 7h10v17c0 6 11 10 11 22v44a6 6 0 0 1-6 6H10a6 6 0 0 1-6-6V46c0-12 11-16 11-22z"/><rect x="8" y="52" width="3" height="34" rx="1.5" class="shine"/></svg></div>
+<div class="pin pin-open" style="left:45.48%;top:21.46%;--d:5" aria-hidden="true"><svg class="bottle" viewBox="0 0 40 96" aria-hidden="true"><rect x="15" y="0" width="10" height="7" rx="2" class="cap"/><path class="glass" d="M15 7h10v17c0 6 11 10 11 22v44a6 6 0 0 1-6 6H10a6 6 0 0 1-6-6V46c0-12 11-16 11-22z"/><rect x="8" y="52" width="3" height="34" rx="1.5" class="shine"/></svg></div>
+<div class="pin pin-open" style="left:68.88%;top:48.33%;--d:6" aria-hidden="true"><svg class="bottle" viewBox="0 0 40 96" aria-hidden="true"><rect x="15" y="0" width="10" height="7" rx="2" class="cap"/><path class="glass" d="M15 7h10v17c0 6 11 10 11 22v44a6 6 0 0 1-6 6H10a6 6 0 0 1-6-6V46c0-12 11-16 11-22z"/><rect x="8" y="52" width="3" height="34" rx="1.5" class="shine"/></svg></div>
+<div class="pin pin-open" style="left:33.78%;top:27.08%;--d:7" aria-hidden="true"><svg class="bottle" viewBox="0 0 40 96" aria-hidden="true"><rect x="15" y="0" width="10" height="7" rx="2" class="cap"/><path class="glass" d="M15 7h10v17c0 6 11 10 11 22v44a6 6 0 0 1-6 6H10a6 6 0 0 1-6-6V46c0-12 11-16 11-22z"/><rect x="8" y="52" width="3" height="34" rx="1.5" class="shine"/></svg></div>
+<div class="pin pin-collected" style="left:39.89%;top:6.46%;--d:0" tabindex="0"><span class="pin-ring" aria-hidden="true"></span><svg class="bottle" viewBox="0 0 40 96" aria-hidden="true"><rect x="15" y="0" width="10" height="7" rx="2" class="cap"/><path class="glass" d="M15 7h10v17c0 6 11 10 11 22v44a6 6 0 0 1-6 6H10a6 6 0 0 1-6-6V46c0-12 11-16 11-22z"/><rect x="8" y="52" width="3" height="34" rx="1.5" class="shine"/></svg><img src="assets/badges/flensburger.jpg" alt="Badge Flensburger Dunkel"><span class="pin-label">Flensburger Dunkel<small>Flensburg</small></span></div>
+<div class="pin pin-collected" style="left:15.96%;top:53.12%;--d:1" tabindex="0"><span class="pin-ring" aria-hidden="true"></span><svg class="bottle" viewBox="0 0 40 96" aria-hidden="true"><rect x="15" y="0" width="10" height="7" rx="2" class="cap"/><path class="glass" d="M15 7h10v17c0 6 11 10 11 22v44a6 6 0 0 1-6 6H10a6 6 0 0 1-6-6V46c0-12 11-16 11-22z"/><rect x="8" y="52" width="3" height="34" rx="1.5" class="shine"/></svg><img src="assets/badges/gaffel.jpg" alt="Badge Gaffel Wiess"><span class="pin-label">Gaffel Wiess<small>Köln</small></span></div>
+<div class="pin pin-collected" style="left:31.91%;top:83.33%;--d:2" tabindex="0"><span class="pin-ring" aria-hidden="true"></span><svg class="bottle" viewBox="0 0 40 96" aria-hidden="true"><rect x="15" y="0" width="10" height="7" rx="2" class="cap"/><path class="glass" d="M15 7h10v17c0 6 11 10 11 22v44a6 6 0 0 1-6 6H10a6 6 0 0 1-6-6V46c0-12 11-16 11-22z"/><rect x="8" y="52" width="3" height="34" rx="1.5" class="shine"/></svg><img src="assets/badges/schoenbuch.jpg" alt="Badge Schönbuch Bräu Jäger Spezial"><span class="pin-label">Schönbuch Bräu Jäger Spezial<small>Böblingen</small></span></div>
+<div class="pin pin-collected" style="left:40.43%;top:79.17%;--d:3" tabindex="0"><span class="pin-ring" aria-hidden="true"></span><svg class="bottle" viewBox="0 0 40 96" aria-hidden="true"><rect x="15" y="0" width="10" height="7" rx="2" class="cap"/><path class="glass" d="M15 7h10v17c0 6 11 10 11 22v44a6 6 0 0 1-6 6H10a6 6 0 0 1-6-6V46c0-12 11-16 11-22z"/><rect x="8" y="52" width="3" height="34" rx="1.5" class="shine"/></svg><img src="assets/badges/wulle.jpg" alt="Badge Wulle Hell"><span class="pin-label">Wulle Hell<small>Stuttgart</small></span></div>
+<div class="pin pin-collected" style="left:66.49%;top:90.62%;--d:4" tabindex="0"><span class="pin-ring" aria-hidden="true"></span><svg class="bottle" viewBox="0 0 40 96" aria-hidden="true"><rect x="15" y="0" width="10" height="7" rx="2" class="cap"/><path class="glass" d="M15 7h10v17c0 6 11 10 11 22v44a6 6 0 0 1-6 6H10a6 6 0 0 1-6-6V46c0-12 11-16 11-22z"/><rect x="8" y="52" width="3" height="34" rx="1.5" class="shine"/></svg><img src="assets/badges/chiemseer.jpg" alt="Badge Chiemseer Hell"><span class="pin-label">Chiemseer Hell<small>Rosenheim</small></span></div>
+      </div>
     </div>
   </section>
 
@@ -184,8 +259,11 @@
         <li>Julian Rößle</li><li>Jannik Thieme</li><li>Moritz Stoppel</li>
       </ul>
       <p class="lead narrow">Studierende der Hochschule der Medien Stuttgart, Wintersemester 2026/27.</p>
-      <!-- TODO: Kontaktadresse eintragen, z. B. mailto:team@... -->
-      <p class="contact">Kontakt: <span class="placeholder">[Mailadresse folgt]</span></p>
+      <p class="contact"><a class="btn" href="mailto:ms633@hdm-stuttgart.de">ms633@hdm-stuttgart.de</a></p>
+      <a class="hdm-badge" href="https://www.hdm-stuttgart.de" target="_blank" rel="noopener">
+        <img src="assets/hdm-logo.svg" alt="Hochschule der Medien Stuttgart" width="102" height="90">
+        <span>Ein studentisches Projekt an der<br><strong>Hochschule der Medien Stuttgart</strong></span>
+      </a>
     </div>
   </section>
 
@@ -193,6 +271,7 @@
 
 <footer class="footer">
   <div class="container">
+    <nav class="footer-links" aria-label="Rechtliches"><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a><a href="mailto:ms633@hdm-stuttgart.de">Kontakt</a></nav>
     <p><strong>Prost!</strong> ist ein studentisches Projekt an der Hochschule der Medien Stuttgart. Die gezeigten Badges sind Designentwürfe. Mit den genannten Brauereien besteht derzeit keine Kooperation.</p>
     <p>Fotos: Unsplash (Unsplash License). Zahlen: Statistisches Bundesamt, Deutscher Brauer Bund, Private Brauereien Bayern.</p>
   </div>
