@@ -16,6 +16,8 @@ Danach im Browser http://localhost:8000 öffnen. (Alternativ ohne npm: `python3 
 
 Die Seite wird über GitHub Pages direkt aus dem `main`-Branch ausgeliefert. Jeder Push auf `main` aktualisiert die Seite nach etwa einer Minute.
 
+**Vor jedem Push `npm run release` ausführen.** Das hängt an CSS und JavaScript eine neue Versionsnummer an. Sonst kombinieren Browser bis zu 10 Minuten lang neues HTML mit alten, zwischengespeicherten Dateien, und die Seite sieht kaputt aus.
+
 ## Noch offen
 
 - Impressum und Datenschutz: ladungsfähige Anschrift eintragen (in `impressum.html` und `datenschutz.html` orange markiert).

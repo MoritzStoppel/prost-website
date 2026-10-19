@@ -4,6 +4,7 @@
   "private": true,
   "description": "Präsentationsseite für die App Prost!",
   "scripts": {
-    "dev": "python3 -m http.server 8000"
+    "dev": "python3 -m http.server 8000",
+    "release": "./bump-version.sh"
   }
 }
