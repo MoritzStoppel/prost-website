@@ -52,7 +52,7 @@ p + p { margin-top: 14px; }
 
 /* Hero */
 .hero { position: relative; min-height: min(calc(100vh - 64px), 900px); display: flex; align-items: flex-end; padding: 96px 0 80px; overflow: hidden; }
-.hero-bg, .sponsor-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.hero-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .hero-scrim { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(23,18,14,.95) 0%, rgba(23,18,14,.85) 55%, rgba(23,18,14,.45) 100%); }
 .hero-content { position: relative; }
 .hero-content h1 { margin-bottom: 24px; }
@@ -223,10 +223,6 @@ p + p { margin-top: 14px; }
 .cta-line { margin-top: 32px; font-size: 19px; }
 .cta-line a { color: var(--amber-dark); font-weight: 700; }
 
-/* Sponsor */
-.sponsor { position: relative; padding: 140px 0; overflow: hidden; }
-.sponsor-content { position: relative; max-width: 760px; margin-left: max(16px, (100% - 1180px) / 2); }
-.sponsor-content .btn { margin-top: 32px; }
 
 /* Team */
 .team { list-style: none; display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; margin-bottom: 24px; }
