@@ -72,7 +72,8 @@ p + p { margin-top: 14px; }
 /* Split */
 .split { display: grid; grid-template-columns: 1fr 1fr; padding: 0; min-height: 640px; }
 .split.reverse .split-img { order: 2; }
-.split-img img { width: 100%; height: 100%; object-fit: cover; }
+.split-img { position: relative; }
+.split-img img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .split-text { padding: 96px clamp(24px, 6vw, 96px); align-self: center; }
 .split-text p { color: var(--text-muted-light); font-size: 19px; }
 .split-text strong { color: var(--cream); }
@@ -106,6 +107,8 @@ p + p { margin-top: 14px; }
 .app-section { background: var(--dark-2); }
 .phones { display: flex; justify-content: center; align-items: flex-start; gap: clamp(32px, 6vw, 96px); margin-top: 56px; flex-wrap: wrap; }
 .iphone { width: 300px; }
+.iphone-2 { margin-top: 40px; }
+.app-section .source { margin-top: 40px; }
 .iphone-screen { position: relative; aspect-ratio: 9 / 19.5; border-radius: 52px; background: var(--dark); overflow: hidden;
   border: 11px solid #0c0b0a;
   box-shadow: 0 0 0 2px #8a7d6c, 0 0 0 4px #2a2420, 0 40px 80px rgba(0,0,0,.55); }
@@ -151,7 +154,7 @@ p + p { margin-top: 14px; }
 .phones.is-ready .badge-grid img:nth-child(4) { transition-delay: 1.15s; }
 .phones.is-ready .badge-grid img:nth-child(5) { transition-delay: 1.3s; }
 .phones.is-visible .iphone { opacity: 1; transform: none; }
-.phones.is-visible .iphone-2 { transform: translateY(40px); }
+.phones.is-visible .iphone-2 { transform: none; }
 .phones.is-visible .new-badge img, .phones.is-visible .badge-grid img { opacity: 1; transform: none; }
 .phones.is-visible .app-points { opacity: 1; transform: none; }
 @media (prefers-reduced-motion: reduce) { .halo { animation: none; } }
@@ -243,16 +246,6 @@ p + p { margin-top: 14px; }
 .footer-links a { color: var(--text-muted-light); font-weight: 700; text-decoration: none; }
 .footer-links a:hover { color: var(--amber); }
 
-/* Rechtstexte */
-.legal { padding: 72px 0 112px; }
-.legal .container { max-width: 780px; }
-.legal h1 { font-size: clamp(36px, 5vw, 56px); margin-bottom: 32px; }
-.legal h2 { font-size: 24px; margin: 40px 0 12px; }
-.legal p, .legal li { color: var(--text-muted-light); }
-.legal ul { padding-left: 20px; }
-.legal a { color: var(--amber); }
-.legal .note { border-left: 4px solid var(--amber); padding: 12px 18px; background: var(--dark-2); border-radius: 0 10px 10px 0; font-size: 15px; }
-.legal .placeholder { color: var(--amber); font-weight: 700; }
 
 /* Responsive */
 @media (max-width: 960px) {

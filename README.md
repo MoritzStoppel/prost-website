@@ -20,7 +20,7 @@ Die Seite wird über GitHub Pages direkt aus dem `main`-Branch ausgeliefert. Jed
 
 ## Noch offen
 
-- Impressum und Datenschutz: ladungsfähige Anschrift eintragen (in `impressum.html` und `datenschutz.html` orange markiert).
+- Die Seite ist nur für den internen Austausch gedacht (noindex, robots.txt). Vor einem öffentlichen Start Impressum und Datenschutzerklärung ergänzen.
 - Vor dem öffentlichen Start die Zeile `<meta name="robots" content="noindex, nofollow">` entfernen, damit Suchmaschinen die Seite finden.
 - Die Badges zeigen echte Brauereinamen. Vor einer Nutzung im Marketing mit den Brauereien abstimmen.
 
